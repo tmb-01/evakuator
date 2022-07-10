@@ -24,3 +24,18 @@ export const Section = styled.section`
   background: ${({ golden }) =>
     golden ? "linear-gradient(315deg, #ffe3b1 0%, #ffd58a 100%)" : "black"};
 `;
+
+export const Title = styled.p`
+  font-weight: 700;
+  font-size: 55px;
+  line-height: 67px;
+  text-align: center;
+  margin-bottom: 10px;
+`;
+
+export const Description = styled.p`
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 29px;
+  text-align: center;
+`;

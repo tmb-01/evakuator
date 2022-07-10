@@ -1,12 +1,14 @@
-import React from 'react'
-import Header from '../../components/header'
+import React from "react";
+import Header from "../../components/header";
+import ProcessSection from "../../components/process";
 
 function MainPage() {
   return (
     <div>
-        <Header/>
+      <Header />
+      <ProcessSection />
     </div>
-  )
+  );
 }
 
-export default MainPage
+export default MainPage;
