@@ -15,7 +15,9 @@ export const MainButton = styled.button`
   line-height: 29px;
   border: 0;
   margin-top: 45px;
+  display: block;
   cursor: pointer;
+  ${({ center }) => center && "margin:50px auto 0"}
 `;
 
 export const Section = styled.section`
@@ -23,6 +25,7 @@ export const Section = styled.section`
   padding: 100px 0;
   background: ${({ golden }) =>
     golden ? "linear-gradient(315deg, #ffe3b1 0%, #ffd58a 100%)" : "black"};
+  color: ${({ golden }) => (golden ? "black" : "white")};
 `;
 
 export const Title = styled.p`
@@ -30,12 +33,15 @@ export const Title = styled.p`
   font-size: 55px;
   line-height: 67px;
   text-align: center;
-  margin-bottom: 10px;
+  /* margin-bottom: 10px; */
 `;
 
 export const Description = styled.p`
+  width: 95%;
   font-weight: 600;
   font-size: 24px;
   line-height: 29px;
   text-align: center;
+  /* margin-top: 10px; */
+  margin: 10px auto 0;
 `;
