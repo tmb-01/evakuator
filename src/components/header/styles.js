@@ -12,6 +12,7 @@ export const HeaderWrapper = styled.header`
   position: relative;
   display: flex;
   flex-direction: column;
+  overflow: hidden;
   /* &::after {
     width: 100%;
     height: 100%;
@@ -36,10 +37,18 @@ export const HeaderWrapper = styled.header`
     background: #1c1c1c;
     opacity: 0.9;
   }
+  @media only screen and (max-width: 750px) {
+    height: fit-content;
+    /* padding-top: 100px; */
+  }
 `;
 
 export const TextData = styled.div`
-  width: 590px;
+  /* width: 0px; */
+  @media only screen and (max-width: 750px) {
+    padding: 100px 0 400px;
+  }
+
 `;
 
 export const Title = styled.p`
@@ -70,6 +79,14 @@ export const ListIconText = styled.ul`
       width: calc(100% - 50px);
     }
   }
+  @media only screen and (max-width: 750px) {
+    li{
+        font-size: 18px;
+    }
+  }
+  @media only screen and (max-width: 560px) {
+    width: 100%;
+  }
 `;
 
 export const CarImageBox = styled.div`
@@ -80,8 +97,25 @@ export const CarImageBox = styled.div`
   left: 45%;
   height: 612px;
   margin: auto;
+  z-index: 0;
   img {
     width: auto;
     height: 100%;
+  }
+  @media only screen and (max-width:  1250px) {
+    height: 518px;
+    left: 49%;
+  }
+  @media only screen and (max-width:  999px) {
+    left: 55%;
+    height: 308px;
+    top: 250px;
+  }
+  @media only screen and (max-width: 750px) {
+    left: 47px;
+    bottom: 26px;
+    margin: 0;
+    top: auto;
+    right: auto;
   }
 `;

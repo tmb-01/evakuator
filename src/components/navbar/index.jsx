@@ -1,6 +1,8 @@
-import React from "react";
+import React, { useState } from "react";
 import {
+  Close,
   ContactBox,
+  MobileNavIcon,
   NavbarContainer,
   NavbarList,
   NavbarWrapper,
@@ -8,12 +10,23 @@ import {
 } from "./styles";
 
 import { ReactComponent as PhoneIcon } from "../../assets/icons/phone.svg";
+import { ReactComponent as MenuBar } from "../../assets/icons/bar.svg";
+import { ReactComponent as X } from "../../assets/icons/x.svg";
 
 function Navbar() {
+  const [active, setActive] = useState(false);
+
   return (
     <NavbarWrapper>
       <NavbarContainer>
-        <NavbarList>
+        <NavbarList active={active}>
+          <Close
+            onClick={() => {
+              setActive(false);
+            }}
+          >
+            <X />
+          </Close>
           <NavItem>
             <a href="/">Евакуатор</a>
           </NavItem>
@@ -31,6 +44,9 @@ function Navbar() {
           <PhoneIcon />
           +380 97 665 77 47
         </ContactBox>
+        <MobileNavIcon onClick={() => setActive(true)}>
+          <MenuBar />
+        </MobileNavIcon>
       </NavbarContainer>
     </NavbarWrapper>
   );

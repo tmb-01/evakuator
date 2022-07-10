@@ -28,9 +28,9 @@ function Header() {
     <HeaderWrapper>
       <div className="cover" />
       <Navbar />
-      <Container style={{ zIndex: 1 }}>
+      <Container style={{ zIndex: 5 }}>
         <TextData>
-          <Title>Швидка подача евакуатора по Дніпру і області</Title>
+          <Title>Швидка подача <br /> евакуатора по Дніпру <br /> і області</Title>
           <ListIconText>
             {iconText.map(({ icon, text }) => (
               <li>
@@ -42,7 +42,7 @@ function Header() {
           <MainButton>Замовити</MainButton>
         </TextData>
         <CarImageBox>
-            <img src={headerCar} alt="" />
+            <img src={headerCar} alt="van" />
         </CarImageBox>
       </Container>
     </HeaderWrapper>

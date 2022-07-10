@@ -1,6 +1,6 @@
 import React from "react";
 import Collapse from "../collapse";
-import { Section, Title } from "../styles/styles";
+import { Container, Section, Title } from "../styles/styles";
 import { CollapsesWrapper, MoreInfoWrapper } from "./styles";
 
 function MoreInfo() {
@@ -80,14 +80,16 @@ function MoreInfo() {
 
   return (
     <Section golden>
-      <MoreInfoWrapper>
-        <Title>Додаткова інформація</Title>
-        <CollapsesWrapper>
-          {list.map(({ title, description }, index) => (
-            <Collapse key={index} title={title} description={description} />
-          ))}
-        </CollapsesWrapper>
-      </MoreInfoWrapper>
+      <Container>
+        <MoreInfoWrapper>
+          <Title>Додаткова інформація</Title>
+          <CollapsesWrapper>
+            {list.map(({ title, description }, index) => (
+              <Collapse key={index} title={title} description={description} />
+            ))}
+          </CollapsesWrapper>
+        </MoreInfoWrapper>
+      </Container>
     </Section>
   );
 }

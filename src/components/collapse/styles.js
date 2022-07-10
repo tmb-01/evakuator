@@ -22,6 +22,11 @@ export const CollapseTitle = styled.div`
     transform: rotate(${({ active }) => (active ? "180deg" : "0deg")});
     transition-duration: 0.5s;
   }
+  @media only screen and (max-width: 750px) {
+    p {
+      font-size: 18px;
+    }
+  }
 `;
 
 export const CollapseDescription = styled.div`
@@ -33,5 +38,10 @@ export const CollapseDescription = styled.div`
   }
   div.text {
     padding-top: 10px;
+  }
+  @media only screen and (max-width: 450px) {
+    div.text {
+      font-size: 14px;
+    }
   }
 `;

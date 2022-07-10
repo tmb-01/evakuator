@@ -5,6 +5,11 @@ export const CardsWrapper = styled.div`
   display: flex;
   justify-content: space-between;
   margin-top: 50px;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  @media only screen and (max-width: 999px) {
+    margin-bottom: 100px;
+  }
 `;
 
 export const CardBox = styled.div`
@@ -18,6 +23,7 @@ export const CardBox = styled.div`
   margin-bottom: 100px;
   img {
     width: 100%;
+    object-fit: cover;
   }
   p.name {
     font-weight: 600;
@@ -33,6 +39,22 @@ export const CardBox = styled.div`
     font-size: 24px;
     line-height: 29px;
     padding: 5px;
+  }
+  @media only screen and (max-width: 1250px) {
+    width: 219px;
+  }
+  @media only screen and (max-width: 999px) {
+    width: 337px;
+    margin-bottom: 15px;
+    img {
+      height: 177px;
+    }
+  }
+  @media only screen and (max-width: 750px) {
+    width: 48%;
+  }
+  @media only screen and (max-width: 450px) {
+    width: 100%;
   }
 `;
 
@@ -55,5 +77,19 @@ export const PaymentMethods = styled.div`
     font-weight: 600;
     font-size: 24px;
     line-height: 29px;
+  }
+  @media only screen and (max-width: 750px) {
+    flex-direction: column;
+    div.line {
+      width: calc(100% - 50px);
+      height: 1px;
+      margin: auto;
+    }
+    p{
+        width: 100%;
+        padding: 16px;
+    }
+    padding: 0;
+    border-radius: 20px;
   }
 `;

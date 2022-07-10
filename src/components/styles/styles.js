@@ -3,6 +3,20 @@ import styled from "styled-components";
 export const Container = styled.div`
   width: 1170px;
   margin: auto;
+
+  @media only screen and (max-width: 1250px) {
+    width: 920px;
+  }
+  @media only screen and (max-width: 980px) {
+    width: 688px;
+  }
+  @media only screen and (max-width: 750px) {
+    width: 100%;
+    padding: 0 40px;
+  }
+  @media only screen and (max-width: 450px) {
+    padding: 0 15px;
+  }
 `;
 
 export const MainButton = styled.button`
@@ -17,7 +31,10 @@ export const MainButton = styled.button`
   margin-top: 45px;
   display: block;
   cursor: pointer;
-  ${({ center }) => center && "margin:50px auto 0"}
+  ${({ center }) => center && "margin: 50px auto 0"};
+  @media only screen and (max-width: 450px) {
+    width: 100%;
+  }
 `;
 
 export const Section = styled.section`
@@ -34,6 +51,9 @@ export const Title = styled.p`
   line-height: 67px;
   text-align: center;
   /* margin-bottom: 10px; */
+  @media only screen and (max-width: 750px) {
+    font-size: 50px;
+  }
 `;
 
 export const Description = styled.p`
@@ -44,4 +64,7 @@ export const Description = styled.p`
   text-align: center;
   /* margin-top: 10px; */
   margin: 10px auto 0;
+  @media only screen and (max-width: 750px) {
+    font-size: 18px;
+  }
 `;

@@ -2,10 +2,12 @@ import styled from "styled-components";
 
 export const Box = styled.div`
   display: flex;
-  margin-top: 30px;
+  flex-wrap: wrap;
   div.box {
-    width: 50%;
+    width: 100%;
     text-align: center;
+    margin-top: 30px;
+
     p.title {
       font-weight: 400;
       font-size: 24px;
@@ -25,6 +27,19 @@ export const Box = styled.div`
       line-height: 67px;
       color: white;
       text-decoration: none;
+    }
+  }
+  @media only screen and (max-width: 1250px) {
+    div.box {
+      width: 100%;
+    }
+  }
+  @media only screen and (max-width: 750px) {
+    div.box {
+      a {
+        font-size: 38px;
+        line-height: 46px;
+      }
     }
   }
 `;

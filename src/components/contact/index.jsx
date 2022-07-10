@@ -13,10 +13,10 @@ function Contact() {
             <p className="title">Телефон</p>
             <a href="tel:+380976657747">+380 97 665 77 47</a>
           </div>
-          <div className="box">
+          {/* <div className="box">
             <p className="title">Почта</p>
             <a href="mailto:vitalisdpua@gmail.com">vitalisdpua@gmail.com</a>
-          </div>
+          </div> */}
         </Box>
       </Container>
     </Section>
