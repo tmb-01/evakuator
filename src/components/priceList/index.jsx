@@ -13,7 +13,7 @@ import rect2 from "../../assets/images/Rectangle2.png";
 import rect3 from "../../assets/images/Rectangle3.png";
 import rect4 from "../../assets/images/Rectangle4.png";
 
-function PriceSection() {
+function PriceSection({setPopUp}) {
   const list = [
     {
       img: rect1,
@@ -66,7 +66,7 @@ function PriceSection() {
           <div className="line" />
           <p>Переказ на картку</p>
         </PaymentMethods>
-        <MainButton center>Замовити</MainButton>
+        <MainButton center onClick={()=>setPopUp(true)}>Замовити</MainButton>
       </Container>
     </Section>
   );

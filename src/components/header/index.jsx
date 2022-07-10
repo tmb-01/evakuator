@@ -8,7 +8,7 @@ import { ReactComponent as Clock } from "../../assets/icons/clock.svg";
 import { ReactComponent as Label } from "../../assets/icons/label.svg";
 import headerCar from "../../assets/images/header-car.png"
 
-function Header() {
+function Header({setPopUp}) {
   const iconText = [
     {
       icon: <MapPin />,
@@ -39,7 +39,7 @@ function Header() {
               </li>
             ))}
           </ListIconText>
-          <MainButton>Замовити</MainButton>
+          <MainButton onClick={()=>setPopUp(true)}>Замовити</MainButton>
         </TextData>
         <CarImageBox>
             <img src={headerCar} alt="van" />
